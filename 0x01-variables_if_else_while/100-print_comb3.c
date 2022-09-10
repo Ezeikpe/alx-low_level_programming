@@ -8,6 +8,7 @@
 int main(void)
 {
 	int a, b;
+
 	for (a = '0'; a <= '9'; a++)
 	{
 		for (b = '0'; b <= '9'; b++)
@@ -29,8 +30,9 @@ int main(void)
 
 		}	
 
-	}	
-	putchar('\n');
-	return (0);
+	}
+
+putchar('\n');
+return (0);
 
 }
