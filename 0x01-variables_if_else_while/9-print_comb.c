@@ -2,29 +2,22 @@
 /**
  * main - Entry point
  *
- * Return: Always 0 (Success/correct)
+ * Return: Always 0 (true)
  */
 int main(void)
-
 {
-int number;
 
+	int i;
 
-for (number = 48; number <= 57; number++)
-{
-putchar(number);
-
-if (number == 57)
-{
-break;
-}
-	
-putchar(',');
-putchar (' ');
-}
-
-putchar('\n');
-
-return (0);
-
+	for (i = 10; i < 20; i++)
+	{
+		putchar((i % 10) + '0');
+		if (i != 19)
+                {
+			putchar(',');
+			putchar (' ');
+		}
+	}
+	putchar('\n');
+	return (0);
 }
