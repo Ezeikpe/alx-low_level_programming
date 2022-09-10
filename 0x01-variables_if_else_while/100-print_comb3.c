@@ -21,10 +21,8 @@ int main(void)
 
 				if (a != '8' || (a == '8' && b != '9'))
 				{
-
 					putchar(',');
 					putchar(' ');
-
 				}
 			}
 
@@ -32,7 +30,6 @@ int main(void)
 
 	}
 
-putchar('\n');
-return (0);
-
+	putchar('\n');
+	return (0);
 }
