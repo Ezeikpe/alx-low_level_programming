@@ -4,17 +4,15 @@
  * Return: Always 0 (true)
  */
 int main(void)
-
 {
-int i;
 
-for (i = 0 ; i < 10; i++)
-{
-printf("%i", i);
-}
+int a = 0;
+
+for (; a < 10 ; a++)
+printf("%d", a);
 
 printf("\n");
-
+putchar('\n');
 return (0);
 
 }
