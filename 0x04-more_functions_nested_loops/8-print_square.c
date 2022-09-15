@@ -8,22 +8,23 @@
 
 void print_square(int n)
 {
-int i = 0, ii;
 
-while (i < n && n > 0)
-{
+	int i = 0, ii;
 
-ii = 0;
-while (ii < n)
-{
-_putchar('#');
-ii++;
-}
+	while (i < n && n > 0)
+	{	
 
-_putchar('\n');
-++;
-}
-if (i == 0)
-_putchar('\n');
+		ii = 0;
+		while (ii < n)
+		{
+			_putchar('#');
+			ii++;
+		}
+
+		_putchar('\n');
+		++;
+	}
+	if (i == 0)
+		_putchar('\n');
 
 }
