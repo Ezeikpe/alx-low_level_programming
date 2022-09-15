@@ -8,11 +8,15 @@
 void print_numbers(void)
 {
 
-int i;
+	char n = 0;
+	{
 
-    for (i = '0'; i <= '9'; i++)
-{
-_putchar(i);
+	while (n
+	{
+
+	_putchar('0' + n);
+in++;
+
 }
 _putchar('\n');
 
