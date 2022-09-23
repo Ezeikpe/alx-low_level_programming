@@ -25,11 +25,12 @@ void printHexes(char *b, int start, int end)
 
 	while (i < 10)
 	{
-		ch = *(b + i + start);
-
-		if (!isPrintableASCII(ch))
-			ch = 46;
-		printf("%c", ch);	
+		if (i < end)
+			printf("%02x", *(b + start + i));
+		else
+			printf("  ");
+		if (i % 2)
+			printf(" ");
 		i++;
 	}
 }
