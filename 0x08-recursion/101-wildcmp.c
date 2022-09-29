@@ -4,7 +4,6 @@
 /**
  * wildcmp - check the code for Holberton School students.
  * @s1: string
- *
  * @s2: string
  * @a: int
  * @b: int
@@ -40,7 +39,6 @@ return (0);
  * @s1: string
  * @s2: string
  * @a: int
- *
  * @b: int
  * @wildUsed: int
  * Return: Always 0.
