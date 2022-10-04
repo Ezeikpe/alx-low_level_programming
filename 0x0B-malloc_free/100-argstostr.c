@@ -1,56 +1,51 @@
-#include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
 
 /**
- * argstostr - convert the params passed to the program to string
- * @ac: the argument count
- * @av: the argument vector
- * Return:
+ * _strlen - find length of a string
+ * @s: string
+ * Return: int
+ */
+
+int _strlen(char *s)
+{
+int size = 0;
+for (; s[size] != '\0'; size++)
+;
+return (size);
+}
+
+/**
+ * *argstostr - description
+ * @ac: int
+ * @av: arguments
+ * Return: string
  */
 
 char *argstostr(int ac, char **av)
 {
-	int ch = 0, i = 0, j = 0, k = 0;
-	char *s;
+int i = 0, nc = 0, j = 0, cmpt = 0;
+char *s;
 
-	if (ac == 0 || av == NULL)
-		return (NULL);
+if (ac == 0 || av == NULL)
+	return (NULL);
 
-	while (i < ac)
-	{
-		while (i < ac)
-		{
-			ch++;
-			j++;
-		}
-	
-		j = 0;
-		i++;
-	}
+for (; i < ac; i++, nc++)
+	nc += _strlen(av[i]);
 
-	s = malloc((sizeof(char) * ch) + ac + 1);
+s = malloc(sizeof(char) * nc + 1);
+if (s == 0)
+	return (NULL);
 
-	i = 0;
-	while (av[i])
-	{
-		while (av[i][j])
-		{
-			s[k] = av[i][j];
-			k++;
-			j++;
-		}
+for (i = 0; i < ac; i++)
+{
+	for (j = 0; av[i][j] != '\0'; j++, cmpt++)
+		s[cmpt] = av[i][j];
 
-		s[k] = '\n';
+	s[cmpt] = '\n';
+	cmpt++;
+}
+s[cmpt] = '\0';
 
-		j = 0;
-		k++;
-		i++;
-
-	}
-
-	k++;
-	s[k] = '\0';
-	return (s);
-
+return (s);
 }
