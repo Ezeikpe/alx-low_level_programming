@@ -1,25 +1,19 @@
 #include "lists.h"
 
 /**
- *
- *  *free_listint - The function that free a memory location
- *
- *   *@head: the head of the linked list
- *
- *    */
-
-
-
+ *free_listint - The function that free a memory location
+ *@head: the head of the linked list
+ */
 void free_listint(listint_t *head)
 {
+	listint_t *tmp;
 
-		listint_t *tmp;
+	if (head == NULL)
 
-		if (head == NULL)
+		return;
 
-			return;
+	while (head)
 
-		while (head)
 	{
 		tmp = head->next;
 		free(head);
