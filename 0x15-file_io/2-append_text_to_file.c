@@ -38,6 +38,12 @@ int append_text_to_file(const char *filename, char *text_content)
 	}
 	if (text_content)
 	{
+		nletters = write(file, text_content, _strlen(text_content));
+		if (nletters == -1)
+		{
+			close(file);
+			return (-1);
+		}
 	}
 	close(file);
 	return (1);
