@@ -33,7 +33,7 @@ int main(int ac, char **av)
 		if (l_write == -1)
 		{ dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 			exit(99); }
-																		}
+	}
 	close_file = close(file_from);
 	if (close_file == -1)
 	{ dprintf(STDERR_FILENO, "Error: Can't close fd  %d\n", file_from);
