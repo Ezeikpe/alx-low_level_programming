@@ -12,7 +12,7 @@ int main(int ac, char **av)
 	ssize_t  l_read = 1024, l_write, close_file;
 	char content[1024];
 
-i	if (ac != 3)
+	if (ac != 3)
 	{ dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97); }
 	file_from = open(av[1], O_RDONLY);
