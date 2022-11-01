@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * read_textfile - check the code for Holberton School students.
  * @filename: file to read and write
@@ -25,24 +24,20 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	nletters = read(file, text, sizeof(char) * letters);
-
-		if (nletters == -1)
-
+	if (nletters == -1)
 	{
 		free(text);
 		close(file);
  		return (0);
 	}
-		nletters = write(STDOUT_FILENO, text, nletters);			if (nletters == -1)
-
+	nletters = write(STDOUT_FILENO, text, nletters);	
+	if (nletters == -1)
 	{
 		free(text);
 		close(file);
-	return (0);
+		return (0);
 	}
-
-	}
-	close(file);
-	return (1);
-	}
+		free(text);
+		close(file);
+		return (nletters);
 }
